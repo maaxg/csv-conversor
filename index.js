@@ -8,6 +8,7 @@ var reader = new Reader()
 var htmlWriter = new FileWriter()
 
 async function main() {
+                            //edit this to your csv file
     var data = await reader.Read('./cs50.csv')
 
     var dataProcessed = Processor.Process(data)
@@ -19,8 +20,6 @@ async function main() {
     htmlWriter.Write(Date.now() + ".html", html)
     
     PdfWriter.WritePdf(Date.now() + ".PDF", html)
-
-    console.log(html)
 }
 
 main()
